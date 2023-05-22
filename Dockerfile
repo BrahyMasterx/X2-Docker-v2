@@ -1,7 +1,6 @@
 FROM alpine:latest
 EXPOSE 8080
 WORKDIR /app
-COPY configure.sh /app
 
 ENV WEB_USERNAME=admin
 ENV WEB_PASSWORD=admin*2023*
@@ -17,6 +16,6 @@ RUN wget https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.x86_64
 RUN mv ttyd.x86_64 ttyd
 RUN chmod +x ttyd
 
-
+ADD configure.sh /app/configure.sh
 RUN chmod +x /configure.sh
 CMD /configure.sh
