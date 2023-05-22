@@ -18,4 +18,4 @@ RUN chmod +x ttyd
 
 COPY configure.sh /app/configure.sh
 RUN chmod +x /app/configure.sh
-CMD ls
+CMD /app/configure.sh
