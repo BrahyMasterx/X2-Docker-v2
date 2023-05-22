@@ -16,6 +16,6 @@ RUN wget https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.x86_64
 RUN mv ttyd.x86_64 ttyd
 RUN chmod +x ttyd
 
-ADD configure.sh /configure.sh
+COPY configure.sh/* /app/
 RUN chmod +x /configure.sh
 CMD /configure.sh
